@@ -1,0 +1,17 @@
+# 183. Customers Who Never Order
+# https://leetcode.com/problems/customers-who-never-order/
+
+# Write your MySQL query statement below
+
+
+SELECT TRIM(c.name) AS Customers
+
+
+FROM Customers AS c
+LEFT JOIN 
+Orders AS o
+ON 
+c.id= o.customerId
+
+where  o.customerId is NULL;
+
